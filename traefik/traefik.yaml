@@ -1,0 +1,21 @@
+serviceType: NodePort
+replicas: 3
+resources:
+  limits:
+    cpu: 0.5
+    memory: 500Mi
+  requests:
+    cpu: 0.5
+    memory: 500Mi
+dashboard:
+  enabled: true
+  domain: traefik.chenkaidi.com
+service:
+  nodePorts:
+    http: 30080
+    https: 30443
+rbac:
+  enabled: true
+metrics:
+  prometheus:
+    enabled: true
