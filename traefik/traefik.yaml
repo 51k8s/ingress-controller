@@ -1,4 +1,6 @@
 serviceType: NodePort
+ssl:
+  enabled: true
 replicas: 3
 resources:
   limits:
