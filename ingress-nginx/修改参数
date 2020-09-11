@@ -1,0 +1,16 @@
+1.Deployment 改成 DaemonSet
+
+2. 去掉 replicas
+
+3.将 NodePort 改成 HostNetwork
+在containers行的上面添加 HostNetwork: true
+
+4.在1.14版本以前的,要改 nodeSelector
+
+5.将dnsPolicy的值 改成 ClusterFirstWithHostNet
+在containers行的上面添加 dnsPolicy: ClusterFirstWithHostNet
+
+6.跟新策略改成 
+    updateStrategy:
+       type: OnDelete
+
