@@ -1,1 +1,6 @@
-https://github.com/kubernetes/ingress-nginx/blob/master/deploy/static/mandatory.yaml
+Ingress 官方文档：https://kubernetes.io/docs/concepts/services-networking/ingress/
+
+Ingress-Nginx 安装文档：https://kubernetes.github.io/ingress-nginx/deploy/
+
+Ingress-Nginx 文档：https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/
+
