@@ -2,8 +2,8 @@
 
 2. 去掉 replicas
 
-3.将 NodePort 改成 HostNetwork
-在containers行的上面添加 HostNetwork: true
+3.将 nodePort 改成 hostNetwork
+在containers行的上面添加 hostNetwork: true
 
 4.在1.14版本以前的,要改 nodeSelector
 
