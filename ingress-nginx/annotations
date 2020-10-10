@@ -1,14 +1,5 @@
-Ingress：
-	Ingress-nginx：kubernetes官方维护的ingress
-	Nginx-ingress：nginx官方维护的ingress
-差别：https://github.com/nginxinc/kubernetes-ingress/blob/master/docs/nginx-ingress-controllers.md
-
-Ingress-nginx的官方文档：https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rewrite
-Nginx-ingress的官方文档：https://docs.nginx.com/nginx-ingress-controller/configuration/ingress-resources/advanced-configuration-with-annotations/
+Ingress-nginx的官方文档：https://kubernetes.github.io/ingress-nginx/
 Ingress-nginx Github：https://github.com/kubernetes/ingress-nginx
-Nginx-ingress Github：https://github.com/nginxinc/kubernetes-ingress/blob/master/docs/nginx-ingress-controllers.md
-
-
 
 
 创建一个ingress实例
@@ -71,6 +62,18 @@ spec:
           serviceName: ingress-test
           servicePort: 80
         path: /something(/|$)(.*)
+	
+https://kubernetes.github.io/ingress-nginx/examples/rewrite/
+
+In this ingress definition, any characters captured by (.*) will be assigned to the placeholder $2, 
+which is then used as a parameter in the rewrite-target annotation.
+
+For example, the ingress definition above will result in the following rewrites:
+
+rewrite.bar.com/something rewrites to rewrite.bar.com/
+rewrite.bar.com/something/ rewrites to rewrite.bar.com/
+rewrite.bar.com/something/new rewrites to rewrite.bar.com/new
+
 
 
 https://kubernetes.github.io/ingress-nginx/user-guide/tls/
