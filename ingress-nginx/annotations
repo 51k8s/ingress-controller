@@ -109,13 +109,15 @@ spec:
     secretName: ca-cert
 
 
-
-
 设置默认证书：--default-ssl-certificate=default/foo-tls
 更改的ingress-controller的启动参数
 
 
 Dashboard自定义证书
+
+nginx.ingress.kubernetes.io/ssl-passthrough: true ### 让后端解析ssl
+nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
