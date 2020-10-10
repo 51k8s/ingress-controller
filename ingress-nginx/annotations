@@ -12,7 +12,7 @@ Nginx-ingress Github：https://github.com/nginxinc/kubernetes-ingress/blob/maste
 
 
 创建一个ingress实例
- vim ingress-demo.yaml
+vim ingress-demo.yaml
 
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -33,28 +33,23 @@ kubectl create -f ingress-demo.yaml
 
 
 Redirect：
-apiVersion: v1
-items:
-- apiVersion: extensions/v1beta1
-  kind: Ingress
-  metadata:
-    annotations:
-      nginx.ingress.kubernetes.io/permanent-redirect: https://www.baidu.com
-    name: ingress-test
-    namespace: ratel-test1
-  spec:
-    rules:
-    - host: ingress.test.com
-      http:
-        paths:
-        - backend:
-            serviceName: ingress-test
-            servicePort: 80
-          path: /
-kind: List
+apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
-  resourceVersion: ""
-  selfLink: ""
+  annotations:
+    nginx.ingress.kubernetes.io/permanent-redirect: https://www.baidu.com
+  name: ingress-test
+  namespace: ratel-test1
+spec:
+  rules:
+  - host: ingress.test.com
+    http:
+      paths:
+      - backend:
+          serviceName: ingress-test
+          servicePort: 80
+        path: /
+
 
 
 
