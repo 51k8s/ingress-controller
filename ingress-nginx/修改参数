@@ -11,6 +11,7 @@
 在containers行的上面添加 dnsPolicy: ClusterFirstWithHostNet
 
 6.跟新策略改成 
-    updateStrategy:
-       type: OnDelete
+spec:
+  updateStrategy:
+    type: OnDelete
 
