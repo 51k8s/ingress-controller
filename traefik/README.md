@@ -8,15 +8,15 @@ microservices with ease.
 This chart bootstraps Traefik as a Kubernetes ingress controller with optional support for SSL and
 Let's Encrypt.
 
-## A Quick Note on Versioning
-https://github.com/traefik/traefik
+### A Quick Note on Versioning
+- https://github.com/traefik/traefik
 
 ### Quick Start
-https://doc.traefik.io/traefik/getting-started/quick-start/
+- https://doc.traefik.io/traefik/getting-started/quick-start/
 
 ### Install Traefik
 - https://doc.traefik.io/traefik/getting-started/install-traefik/
 - https://doc.traefik.io/traefik/getting-started/install-traefik/#use-the-helm-chart
 
 ### Guide Chinese
-https://docs.traefik.cn/user-guide/kubernetes
+- https://docs.traefik.cn/user-guide/kubernetes
